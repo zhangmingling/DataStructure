@@ -1,6 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "linklist.h"
+
 linklist list_create()
 {
     // malloc

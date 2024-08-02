@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "bitree.h"
 
 bitree *tree_create()
@@ -50,4 +48,8 @@ void postorder(bitree *r)
     postorder(r->left);
     postorder(r->right);
     printf("%c", r->data);
+}
+void layerorder(bitree *r)
+{
+    
 }

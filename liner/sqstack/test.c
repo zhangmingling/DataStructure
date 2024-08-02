@@ -16,5 +16,11 @@ int main(int argc, const char *argv[])
     printf("top is: %d\n", get_top(s));
     stack_push(s, 30);
     printf("top is: %d\n", get_top(s));
+
+    while (!stack_empty(s))
+    {
+        printf("pop:%d\n", stack_pop(s));
+    }
+    stack_free(s);
     return 0;
 }

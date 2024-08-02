@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "linklist.h"
 
 int insert_test();

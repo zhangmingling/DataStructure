@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "bitree.h"
 
 int main(int argc, const char *argv[])

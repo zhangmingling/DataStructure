@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "sqstack.h"
 
 sqstack *stack_create(int len)
@@ -25,21 +22,47 @@ sqstack *stack_create(int len)
     return s;
 }
 
-void stack_clear(sqstack *s)
+int stack_clear(sqstack *s)
 {
+    if (s == NULL)
+    {
+        printf("s is NULL\n");
+        return -1;
+    }
     s->top = -1;
+    return 0;
 }
 
 int stack_empty(sqstack *s)
 {
+    if (s == NULL)
+    {
+        printf("s is NULL\n");
+        return -1;
+    }
     return (s->top == -1 ? 1 : 0);
+}
+
+int stack_full(sqstack *s)
+{
+    if (s == NULL)
+    {
+        printf("s is NULL\n");
+        return -1;
+    }
+    return (s->top == s->maxlen - 1 ? 1 : 0);
 }
 
 int stack_push(sqstack *s, data_t value)
 {
-    if (s->top == N - 1)
+    if (s == NULL)
     {
-        printf("overflow!\n");
+        printf("s is NULL\n");
+        return -1;
+    }
+    if (s->top == s->maxlen - 1)
+    {
+        printf("stack is full\n");
         return -1;
     }
 
@@ -55,7 +78,22 @@ data_t stack_pop(sqstack *s)
     return (s->data[s->top + 1]);
 }
 
-data_t get_top(sqstack *s)
+data_t stack_top(sqstack *s)
 {
     return (s->data[s->top]);
+}
+
+int stack_free(sqstack *s)
+{
+    if (s == NULL)
+    {
+        printf("s is NULL\n");
+        return -1;
+    }
+    if (s->data)
+    {
+        free(s->data);
+    }
+    free(s);
+    return 0;
 }
