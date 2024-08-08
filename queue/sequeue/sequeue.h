@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define N 64
+#define N 6
 typedef int datatype;
 typedef struct
 {
     datatype data[N];
-    int front, rear;
+    int front;
+    int rear;
 } sequeue;
 
 sequeue *queue_create();
