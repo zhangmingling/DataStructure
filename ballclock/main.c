@@ -29,10 +29,10 @@ int main()
     linkqueue *lq;
     sqstack *s_hour, *s_five, *s_min;
     int value = 0, min = 0;
+    lq = queue_create();
     s_hour = stack_create(11);
     s_five = stack_create(11);
     s_min = stack_create(4);
-    lq = queue_create();
     if (lq == NULL || s_hour == NULL || s_five == NULL || s_min == NULL)
     {
         return -1;
