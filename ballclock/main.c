@@ -65,9 +65,9 @@ int main()
                 }
                 else
                 {
-                    while (!stack_full(s_five))
+                    while (!stack_empty(s_five))
                     {
-                        enqueue(lq, stack_pop(s_min));
+                        enqueue(lq, stack_pop(s_five));
                     }
                     if (!stack_full(s_hour))
                     {
@@ -75,7 +75,7 @@ int main()
                     }
                     else
                     {
-                        while (!stack_full(s_hour))
+                        while (!stack_empty(s_hour))
                         {
                             enqueue(lq, stack_pop(s_hour));
                         }
