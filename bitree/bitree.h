@@ -1,3 +1,6 @@
+#ifndef _BITREE_H_
+#define _BITREE_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -13,3 +16,5 @@ void preorder(bitree *r);
 void inorder(bitree *r);
 void postorder(bitree *r);
 void layerorder(bitree *r);
+
+#endif

@@ -15,6 +15,8 @@ int main(int argc, const char *argv[])
 
     postorder(r);
     puts("");
+
+    layerorder(r);
     
     return 0;
 }

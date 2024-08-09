@@ -1,3 +1,6 @@
+#ifndef _LINKSTACK_H_
+#define _LINKSTACK_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,3 +17,5 @@ data_t stack_pop(linkstack s);
 int stack_empty(linkstack s);
 data_t stack_top(linkstack s);
 linkstack stack_free(linkstack s);
+
+#endif

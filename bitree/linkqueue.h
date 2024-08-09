@@ -1,11 +1,9 @@
 #ifndef _LINKQUEUE_H_
 #define _LINKQUEUE_H_
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "bitree.h"
 
-typedef int datatype;
-
+typedef bitree *datatype;
 typedef struct node
 {
     datatype data;

@@ -1,4 +1,4 @@
-#include "bitree.h"
+#include "linkqueue.h"
 
 bitree *tree_create()
 {
@@ -51,5 +51,35 @@ void postorder(bitree *r)
 }
 void layerorder(bitree *r)
 {
-    
+    if (r == NULL)
+    {
+        return;
+    }
+
+    linkqueue *lq;
+    lq = queue_create();
+    if (lq == NULL)
+    {
+        return;
+    }
+
+    printf("%c", r->data);
+    enqueue(lq, r);
+
+    while (!queue_empty(lq))
+    {
+        r = dequeue(lq);
+
+        if (r->left)
+        {
+            printf("%c", r->left->data);
+            enqueue(lq, r->left);
+        }
+        if (r->right)
+        {
+            printf("%c", r->right->data);
+            enqueue(lq, r->right);
+        }
+    }
+    puts("");
 }

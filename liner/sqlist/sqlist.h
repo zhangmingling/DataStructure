@@ -1,3 +1,6 @@
+#ifndef _SQLIST_H_
+#define _SQLIST_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -32,3 +35,5 @@ int list_lenth(sqlink L);
 int list_locate(sqlink L, data_t value);
 int list_insert(sqlink L, data_t value, int pos);
 int list_show(sqlink L);
+
+#endif

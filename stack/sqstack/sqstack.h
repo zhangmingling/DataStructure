@@ -1,3 +1,6 @@
+#ifndef _SQSTACK_H_
+#define _SQSTACK_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -19,3 +22,5 @@ int stack_push(sqstack *s, data_t value);
 data_t stack_pop(sqstack *s);
 data_t stack_top(sqstack *s);
 int stack_free(sqstack *s);
+
+#endif

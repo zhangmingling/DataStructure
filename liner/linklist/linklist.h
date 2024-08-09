@@ -1,3 +1,6 @@
+#ifndef _LINKLIST_H_
+#define _LINKLIST_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,3 +23,5 @@ linklist list_free(linklist H);
 int list_reverse(linklist H);
 linklist list_adjmax(linklist H);
 int list_merge(linklist H1, linklist H2);
+
+#endif

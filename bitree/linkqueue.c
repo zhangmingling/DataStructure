@@ -49,7 +49,7 @@ datatype dequeue(linkqueue *lq)
     if (lq == NULL)
     {
         printf("lq is NULL\n");
-        return -1;
+        return NULL;
     }
 
     linklist p;
@@ -82,7 +82,7 @@ int queue_clear(linkqueue *lq)
     {
         p = lq->front;
         lq->front = p->next;
-        printf("free of clear: %d\n", p->data);
+        // printf("free of clear: %d\n", p->data);
         free(p);
         p = NULL;
     }
@@ -102,7 +102,7 @@ linkqueue *queue_free(linkqueue *lq)
     {
         p = lq->front;
         lq->front = p->next;
-        printf("free: %d\n", p->data);
+        // printf("free: %d\n", p->data);
         free(p);
         p = NULL;
     }
