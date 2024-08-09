@@ -4,7 +4,7 @@ int main()
 {
     linkqueue *lq;
     lq = queue_create();
-    if(lq == NULL)
+    if (lq == NULL)
     {
         return -1;
     }
@@ -13,7 +13,13 @@ int main()
     enqueue(lq, 20);
     enqueue(lq, 30);
 
-    while(!queue_empty(lq))
+    queue_clear(lq);
+
+    enqueue(lq, 40);
+    enqueue(lq, 50);
+    enqueue(lq, 60);
+
+    while (!queue_empty(lq))
     {
         printf("dequeue: %d\n", dequeue(lq));
     }
